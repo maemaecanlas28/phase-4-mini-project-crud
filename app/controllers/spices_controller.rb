@@ -8,10 +8,10 @@ rescue_from ActiveRecord::RecordNotFound, with: :response_not_found
         render json: spices
     end
 
-    def show
-        spice = find_spice
-        render json: spice
-    end
+    # def show
+    #     spice = find_spice
+    #     render json: spice
+    # end
 
     def create
         spice = Spice.create(spice_params)
